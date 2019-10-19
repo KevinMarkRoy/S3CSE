@@ -162,7 +162,7 @@ void evl(){
   for (t=front;t!=NULL;t=t->link){
     if (isalpha(t->character)){ 
 	eval *newnode; newnode=(eval*)malloc(sizeof(eval)); newnode->link=NULL;
-	printf("\nEnter value of %c",t->character);
+	printf("\nEnter value of %c: ",t->character);
 	scanf("%d",&newnode->number);
 	if (start==NULL)
 	  start=newnode;
@@ -170,8 +170,8 @@ void evl(){
 	  newnode->link=start;
 	  start=newnode;
 	}
+    }
   }
-  printf ("%d",start->number);
 }
 int main(){
   printf("Enter expression: ");
