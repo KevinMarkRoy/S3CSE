@@ -36,7 +36,7 @@ void display(){
   printf("\n");
 }
 int main(){
-  int x,data;
+  int x=1,data;
   printf("Enter Option\n1.Enqueue\n2.Dequeue\n3.Display\n0.Exit\n");
   while(x){
     scanf("%d",&x);
