@@ -29,7 +29,7 @@ int main(void){
         printf("\nEnter the elements: ");
         scanf("%d",&A[i]);
     }
-    printf("\nEnter the adjacency matrix");
+    printf("\nEnter the adjacency matrix:\n");
     for(i=0;i<n;++i)
         for(j=0;j<n;++j){
 	        scanf("%d",&MAT[i][j]);
