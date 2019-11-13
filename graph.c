@@ -4,7 +4,7 @@ int MAT[MAX][MAX],A[MAX],Q[MAX];
 int n,r=-1,f=0; 
 void DFS(int i,int vis[]){
     if(i!=n){
-        printf("\t%d",A[i]);
+        printf("%d ",A[i]);
         vis[i]=1;
         for(int j=0;j<n;++j)
 	        if(!vis[j]&&MAT[i][j])
@@ -35,22 +35,25 @@ int main(void){
 	        scanf("%d",&MAT[i][j]);
         }
     while(1){
-        printf("\n\t\t1.DFS\n\t\t2.BFS\n\t\t3.EXIT\n\tSelect the mode of traversal: ");
+        printf("1.DFS\n2.BFS\n\3.EXIT\n");
         scanf("%d",&ch);
         for(i=0;i<n;++i)
 	        vis[i]=0;
         if(ch==3)
 	        break;
-        else if(ch==1)
+        else if(ch==1){
 	        DFS(0,vis);
+		printf("\n");
+	}
         else if(ch==2){
 	        BFS(0,vis);
 	        for(i=0;i<n;++i){
 	            if(vis[i]){
-		            printf("%d\t",A[i]);
-		        }
+		    		printf("%d ",A[i]);
+		    }
 	        }
-	    }
+		printf("\n");
+	}
         else
 	        printf("\nInavalid choice");
     }
