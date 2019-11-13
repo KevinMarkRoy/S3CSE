@@ -23,7 +23,7 @@ void BFS(int i,int vis[]){
 int main(void){
     int i,j,ch;
     int vis[MAX]={0};
-    printf("\nEnter the no.of nodes: ");
+    printf("Enter the no.of nodes: ");
     scanf("%d",&n);
     for(i=0;i<n;++i){
         printf("\nEnter the elements: ");
